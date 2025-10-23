@@ -18,6 +18,11 @@ Contributors can then claim rewards in **ETH** or **ERC-20 tokens** through the 
 * **Dockerized setup:** One command to spin up the full stack locally.
 
 ---
+## Demo Video (Screen Recording)
+
+https://github.com/user-attachments/assets/78827c02-3328-4108-be95-0d26bcfd444a
+
+---
 
 ## 🧩 Project Structure
 
