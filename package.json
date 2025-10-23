@@ -1,0 +1,30 @@
+{
+  "name": "git-onchain-rewards",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Detect merged GitHub PRs, verify quality, pin to IPFS, register on-chain, and pay contributors.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "install": "echo \"Root install placeholder. Backend/frontend will be added in later steps.\"",
+    "build": "npm run build:contracts && npm run build:backend && npm run build:frontend",
+    "build:contracts": "echo \"Contracts build will run after contracts/tests are added.\"",
+    "build:backend": "if [ -f backend/package.json ]; then (cd backend && npm install && npm run build); else echo \"backend not ready yet\"; fi",
+    "build:frontend": "if [ -f frontend/package.json ]; then (cd frontend && npm install && npm run build); else echo \"frontend not ready yet\"; fi",
+    "start": "echo \"Use docker:up in Step 8, or run backend/frontend individually once created.\"",
+    "docker:up": "docker compose -f docker/docker-compose.yml up -d",
+    "test": "npx hardhat test",
+    "deploy-local": "npx hardhat run scripts/deploy.js --network localhost"
+  }
+  ,
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.8",
+    "@openzeppelin/contracts": "^4.9.5",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.10.0",
+    "hardhat": "^2.22.0"
+  }
+}

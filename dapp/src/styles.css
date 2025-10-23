@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+/* Animated background gradients */
+.bg-animated {
+  background: radial-gradient(1000px 600px at 10% 10%, rgba(124,58,237,0.15), transparent 60%),
+              radial-gradient(800px 500px at 90% 30%, rgba(34,211,238,0.12), transparent 60%),
+              linear-gradient(180deg, rgba(20,26,36,0.95), rgba(10,14,21,0.98));
+}
+
+.glass {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-neon {
+  @apply px-4 py-2 rounded-md font-medium transition-transform transform;
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+  box-shadow: 0 0 20px rgba(124,58,237,0.35), 0 0 20px rgba(34,211,238,0.25);
+}
+.btn-neon:hover { filter: brightness(1.1); }
+.btn-neon:active { transform: scale(0.98); }
+
+.input-neon:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(34,211,238,0.4), 0 0 20px rgba(124,58,237,0.25);
+}
+
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 24px rgba(124,58,237,0.25);
+}
